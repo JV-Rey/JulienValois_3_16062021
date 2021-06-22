@@ -5,21 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo/omf.png" />
     <title>Oh my food!</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
     <script src="https://kit.fontawesome.com/20bd76b430.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div>
-        <header>
-            <img src="images/logo/ohmyfood@2x.svg" alt="logo">
-            <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville<p>
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <p>Explorer nos restaurants</p>
+        <header class="text_align_center margin_top_25px margin_bottom_25px">
+            <img src="images/logo/ohmyfood@2x.svg"  alt="logo">
         </header>
-        <article>
+        <article class="text_align_center background_grey_light padding_bottom_25px">
+            <form action="traitement.php" method="post" id="search">
+                <input type="text" class="fontAwesome text_align_center textarea" placeholder= "&#xf3c5; Paris, Belleville">
+            </form>
+            <h1 class="margin_top_25px">Réservez le menu qui vous convient</h1>
+            <p class="margin_top_15px margin_description">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            <div class="button margin_top_15px padding_bottom_15px padding_top_15px">
+                <a href="#restaurants">Explorer nos restaurants</a>
+            </div>
+        </article>
+        <article class="margin_top_25px">
             <h2>Fonctionnement</h2>
-            <p><span>1</span><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</p>
+            <p></p><span>1</span><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</p>
             <p><span>2</span><i class="fas fa-list-ul"></i>Composez votre menu</p>
             <p><span>3</span><i class="fas fa-store"></i>Dégustez au restaurant</p>
         </article>
