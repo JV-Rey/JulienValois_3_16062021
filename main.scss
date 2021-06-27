@@ -1,17 +1,21 @@
 @font-face {
-    font-family: Shrikhand;
+    font-family: 'Shrikhand';
     src: url(fonts/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
-    font-family: Roboto;
+    font-family: 'Roboto';
     src: url(fonts/Roboto/Roboto-Regular.ttf) format('truetype');
 }
 
 body{
-    font-family: Roboto;
+    font-family: 'Roboto';
 }
 
 h1, h2, h3{
-    font-family: Shrikhand;
+    font-family: 'Shrikhand';
     font-weight: 900;
+}
+
+.bold{
+    font-weight: bolder;
 }
 
 $color-primary: #9356DC;
@@ -30,12 +34,28 @@ h1, h2{
     margin-top: 25px;
 }
 
+.margin_top_15px{
+    margin-top: 15px;
+}
+
 .margin_bottom_25px{
     margin-bottom: 25px;
 }
 
-.margin_top_15px{
-    margin-top: 15px;
+.margin_bottom_15px{
+    margin-bottom: 15px;
+}
+
+.margin_left_15px{
+    margin-left: 15px;
+}
+
+.margin_left_25px{
+    margin-left: 25px;
+}
+
+.margin_right_25px{
+    margin-right: 25px;
 }
 
 .padding_top_25px{
@@ -54,11 +74,14 @@ h1, h2{
     padding-bottom: 15px;
 }
 
-.fontAwesome {
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
+header img{
+    width: 175px;
+}
+
+form i{
+    position: relative;
+    right: 85px;
+    top: 15px;
 }
 
 .textarea{
@@ -67,6 +90,7 @@ h1, h2{
     background-color: rgb(230, 230, 230);
     width: 100%;
     border: none;
+    margin-top: -20px;
 }
 
 .background_grey_light{
@@ -87,11 +111,35 @@ h1{
     margin-left: 75px;
     margin-right: 75px;
     border-radius: 2rem;
-    background-color: $color-secondary;
-    opacity: 0.8;
+    background-image: linear-gradient($color-secondary, $color-primary);
 }
 
-a{
+.box_shadow{
+    box-shadow: 8px 8px 5px rgb(230, 230, 230);
+}
+
+.color_white_decoration{
     text-decoration: none;
     color: white;
+}
+
+.border_radius_fonctionnement{
+    border-radius: 1rem;
+    padding: 15px 0px 15px 15px;
+}
+
+.number_border_radius{
+    border-radius: 50%;
+    padding: 5px 10px 5px 10px;
+
+}
+
+.number_background_color{
+    background-color: $color-primary;
+    color: white;
+}
+
+.number_position_relative{
+    position: relative;
+    right: 25px;
 }

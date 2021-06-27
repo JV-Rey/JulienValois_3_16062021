@@ -13,10 +13,6 @@ h1, h2, h3 {
   font-weight: 900;
 }
 
-.bold {
-  font-weight: bolder;
-}
-
 h1, h2 {
   font-size: 1.5em;
 }
@@ -29,16 +25,16 @@ h1, h2 {
   margin-top: 25px;
 }
 
-.margin_top_15px {
-  margin-top: 15px;
-}
-
 .margin_bottom_25px {
   margin-bottom: 25px;
 }
 
-.margin_bottom_15px {
-  margin-bottom: 15px;
+.margin_top_15px {
+  margin-top: 15px;
+}
+
+.margin_top_45px {
+  margin-top: 45px;
 }
 
 .margin_left_15px {
@@ -47,10 +43,6 @@ h1, h2 {
 
 .margin_left_25px {
   margin-left: 25px;
-}
-
-.margin_right_25px {
-  margin-right: 25px;
 }
 
 .padding_top_25px {
@@ -73,10 +65,11 @@ header img {
   width: 175px;
 }
 
-form i {
-  position: relative;
-  right: 85px;
-  top: 15px;
+.fontAwesome {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
 }
 
 .textarea {
@@ -85,7 +78,6 @@ form i {
   background-color: #e6e6e6;
   width: 100%;
   border: none;
-  margin-top: -20px;
 }
 
 .background_grey_light {
@@ -120,7 +112,9 @@ h1 {
 
 .border_radius_fonctionnement {
   border-radius: 1rem;
-  padding: 15px 0px 15px 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
 }
 
 .number_border_radius {
@@ -135,5 +129,7 @@ h1 {
 
 .number_position_relative {
   position: relative;
-  right: 25px;
-}/*# sourceMappingURL=main.css.map */
+  left: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
