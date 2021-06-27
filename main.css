@@ -21,6 +21,11 @@ h1, h2 {
   font-size: 1.5em;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .text_align_center {
   text-align: center;
 }
@@ -86,6 +91,7 @@ form i {
   width: 100%;
   border: none;
   margin-top: -20px;
+  padding: 0px;
 }
 
 .background_grey_light {
@@ -113,8 +119,7 @@ h1 {
   box-shadow: 8px 8px 5px #e6e6e6;
 }
 
-.color_white_decoration {
-  text-decoration: none;
+.color_white {
   color: white;
 }
 
@@ -136,4 +141,47 @@ h1 {
 .number_position_relative {
   position: relative;
   right: 25px;
+}
+
+.card_restaurant {
+  background-color: white;
+  border-radius: 20px;
+  margin: 25px 15px 25px 15px;
+}
+
+a img {
+  width: 330px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.margin_top_-16px {
+  margin-top: -16px;
+}
+
+.nouveau_position_color_background {
+  position: relative;
+  left: 250px;
+  top: 25px;
+  background-color: #99E2D0;
+  padding: 5px;
+  color: #278870;
+  font-weight: bolder;
+}
+
+.flex_space_between {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+.flex_space_between i {
+  font-size: 1.5em;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
 }/*# sourceMappingURL=main.css.map */
