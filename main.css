@@ -54,6 +54,10 @@ a {
   margin-left: 25px;
 }
 
+.margin_right_15px {
+  margin-right: 15px;
+}
+
 .margin_right_25px {
   margin-right: 25px;
 }
@@ -184,4 +188,22 @@ a img {
 h3 {
   margin-bottom: 8px;
   font-size: 18px;
+}
+
+footer {
+  background-color: #333333;
+}
+footer h2 {
+  font-style: oblique;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+nav a {
+  color: white;
+}
+nav a .fa-hands-helping {
+  font-size: 0.7em;
 }/*# sourceMappingURL=main.css.map */

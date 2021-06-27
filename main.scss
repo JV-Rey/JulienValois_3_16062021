@@ -59,6 +59,10 @@ a{
     margin-left: 25px;
 }
 
+.margin_right_15px{
+    margin-right: 15px;
+}
+
 .margin_right_25px{
     margin-right: 25px;
 }
@@ -190,3 +194,21 @@ h3{
     margin-bottom: 8px;
     font-size: 18px;
 }
+
+footer{
+    background-color: lighten($color: black, $amount: 20);
+    & h2{
+        font-style: oblique;
+    }
+}
+
+ nav{
+    display: flex;
+    flex-direction: column;
+    & a{
+        color: white;
+        & .fa-hands-helping{
+            font-size: 0.7em;
+        }
+    }
+ }
