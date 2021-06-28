@@ -35,6 +35,10 @@ a{
     text-align: center;
 }
 
+.margin_15px{
+    padding: 15px;
+}
+
 .margin_top_25px{
     margin-top: 25px;
 }
@@ -83,8 +87,10 @@ a{
     padding-bottom: 15px;
 }
 
-header img{
-    width: 175px;
+
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 form i{
@@ -107,9 +113,10 @@ form i{
     background-color:  lighten($color: rgb(230, 230, 230), $amount: 5)
 }
 
-h1{
+.h1_acceuil_margin{
     margin-left: 55px;
     margin-right: 55px;
+    margin-top: 25px;
 }
 
 .margin_description{
@@ -212,3 +219,33 @@ footer{
         }
     }
  }
+
+ /*page menu*/
+
+ .fa-arrow-left{
+    float: left;
+    margin-top: 8px;
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+
+.title_oblique{
+    font-style: oblique;
+}
+
+.float_margin_size_heart{
+    float: right;
+    margin-right: 15px;
+    font-size: 1.5em;
+}
+
+.title_menu{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.flex_menu{
+    display: flex;
+    justify-content: space-between;
+}
