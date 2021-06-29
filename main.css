@@ -119,23 +119,35 @@ form i {
 }
 
 .button {
-  margin-left: 75px;
-  margin-right: 75px;
+  padding: 15px;
   border-radius: 2rem;
   background-image: linear-gradient(#FF79DA, #9356DC);
 }
+.button:hover {
+  box-shadow: 8px 8px 15px #e6e6e6;
+}
 
-.box_shadow {
-  box-shadow: 8px 8px 5px #e6e6e6;
+.shadow_hover {
+  box-shadow: 5px 5px 8px #e6e6e6;
+}
+.shadow_hover:hover {
+  box-shadow: 8px 8px 15px #e6e6e6;
 }
 
 .color_white {
   color: white;
 }
 
-.border_radius_fonctionnement {
+.border_radius_fonctionnement_backgound_hover {
   border-radius: 1rem;
   padding: 15px 0px 15px 15px;
+  background-color: #f3f3f3;
+}
+.border_radius_fonctionnement_backgound_hover:hover {
+  background: #f2eafb;
+}
+.border_radius_fonctionnement_backgound_hover:hover i {
+  color: #9356DC;
 }
 
 .number_border_radius {
@@ -160,8 +172,10 @@ form i {
 }
 
 a img {
-  width: 330px;
-  height: 150px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-left-radius: 20px;
@@ -173,9 +187,8 @@ a img {
 }
 
 .nouveau_position_color_background {
-  position: relative;
-  left: 250px;
-  top: 25px;
+  position: absolute;
+  left: 72%;
   background-color: #99E2D0;
   padding: 5px;
   color: #278870;

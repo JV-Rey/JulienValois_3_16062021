@@ -110,7 +110,7 @@ form i{
 }
 
 .background_grey_light{
-    background-color:  lighten($color: rgb(230, 230, 230), $amount: 5)
+    background-color:  lighten($color: rgb(230, 230, 230), $amount: 5);
 }
 
 .h1_acceuil_margin{
@@ -125,23 +125,35 @@ form i{
 }
 
 .button{
-    margin-left: 75px;
-    margin-right: 75px;
+    padding: 15px;
     border-radius: 2rem;
     background-image: linear-gradient($color-secondary, $color-primary);
+    &:hover{
+        box-shadow: 8px 8px 15px rgb(230, 230, 230);
+    }
 }
 
-.box_shadow{
-    box-shadow: 8px 8px 5px rgb(230, 230, 230);
+.shadow_hover{
+    box-shadow: 5px 5px 8px rgb(230, 230, 230);
+    &:hover{
+        box-shadow: 8px 8px 15px rgb(230, 230, 230);
+    }
 }
 
 .color_white{
     color: white;
 }
 
-.border_radius_fonctionnement{
+.border_radius_fonctionnement_backgound_hover{
     border-radius: 1rem;
     padding: 15px 0px 15px 15px;
+    background-color:  lighten($color: rgb(230, 230, 230), $amount: 5);
+    &:hover{
+        background: lighten($color: $color-primary, $amount: 35);
+        & i{
+            color: $color-primary;
+        }
+    }
 }
 
 .number_border_radius{
@@ -167,8 +179,8 @@ form i{
 }
 
 a img{
-    width: 330px;
-    height: 150px;
+    width: max-content;
+    height: 200px;
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -179,9 +191,8 @@ a img{
 }
 
 .nouveau_position_color_background{
-    position: relative;
-    left: 250px;
-    top: 25px;
+    position: absolute;
+    left: 72%;
     background-color: $color-tertiary;
     padding: 5px;
     color: darken($color: $color-tertiary, $amount: 40);
