@@ -35,7 +35,7 @@ a{
     text-align: center;
 }
 
-.margin_15px{
+.padding_15px{
     padding: 15px;
 }
 
@@ -175,7 +175,7 @@ form i{
 .card_restaurant{
     background-color: white;
     border-radius: 20px;
-    margin: 25px 15px 25px 15px;
+    margin: 50px 15px 50px 15px;
 }
 
 a img{
@@ -259,4 +259,39 @@ footer{
 .flex_menu{
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (min-width: 1000px){
+
+    h1, h2{
+        text-align: center;
+    }
+
+    .flex_d{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex_50{
+        flex: 50;
+    }
+    
+    .nouveau_position_color_background{
+        position: relative;
+        top: 25px;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+    .flex_space_between{
+        display: block;
+    }
+
+    .heart_menu{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
 }
