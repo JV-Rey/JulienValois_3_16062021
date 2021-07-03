@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Shrikhand';
-    src: url(fonts/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
+    src: url(./fonts/Shrikhand/Shrikhand-Regular.ttf) format('truetype');
     font-family: 'Roboto';
-    src: url(fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+    src: url(./fonts/Roboto/Roboto-Regular.ttf) format('truetype');
 }
 
 body{
@@ -107,6 +107,7 @@ form i{
     border: none;
     margin-top: -20px;
     padding: 0px;
+    box-shadow: 0px -2px 0px darken($color: rgb(230, 230, 230), $amount: 5);
 }
 
 .background_grey_light{
@@ -250,11 +251,32 @@ footer{
     font-size: 1.5em;
 }
 
+.zindex_radius{
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+    border-radius: 50px 50px 0px 0px;
+    padding-bottom: 100px;
+}
+
+.zindex_margin_enchantee{
+    margin-top: -210px;
+}
+
 .title_menu{
     text-transform: uppercase;
     font-weight: normal;
     font-size: 20px;
+    &:after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 5px;
+        border-bottom: 3px solid $color-tertiary;
+    }
 }
+
 
 .flex_menu{
     display: flex;
@@ -263,8 +285,27 @@ footer{
 
 @media screen and (min-width: 1132px){
 
+    .margin_left_15px{
+        margin-left: 0px;
+    }
+
     h1, h2{
         text-align: center;
+    }
+
+    .zindex_radius{
+        margin-top: -40%;
+    }
+
+    .zindex_margin_enchantee{
+        margin-top: -90%;
+    }
+
+    .zindex_footer{
+        position: relative;
+        z-index: 1;
+        padding-bottom: 90px;
+        padding-top: 75px;
     }
 
     .flex_d{
@@ -283,6 +324,14 @@ footer{
 
     footer{
         text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    nav{
+        margin-left: 0px;
+        
     }
 
     .flex_space_between{
@@ -293,5 +342,10 @@ footer{
         display: flex;
         justify-content: center;
         margin-top: 20px;
+    }
+
+    .title_menu::after{
+        position: relative;
+        left: 45%;
     }
 }
