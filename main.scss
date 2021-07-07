@@ -289,24 +289,63 @@ footer{
     overflow: hidden;
 }
 
-.none{
+.check_box_appear{
     display: none;
 }
 
-.card_restaurant:active .none{
+.card_restaurant:active .check_box_appear{
     display: block;
     background-color:$color-tertiary;
     margin: -41px -30px -15px 0px;
     padding: 24px 30px 0px 30px;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
+    animation: box 1s;
+    
+}
+
+@keyframes box{
+    0%{
+        opacity: 0;
+        margin-right: -115px;
+    }
+
+    25%{
+        opacity: 0.25;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    75%{
+        opacity: 0.75;
+    }
+
+    100%{
+        opacity: 1;
+        margin-right: -30px;
+    }
+}
+
+.card_restaurant:active .fa-check-circle{
+    animation: checkrotate 1s;
+}
+
+@keyframes checkrotate{
+    0%{
+        transform: rotate(0);
+    }
+
+    100%{
+        transform: rotate(1440deg);
+    }
 }
 
 .fa-check-circle{
     background-color:$color-tertiary;
     color: white;
-    font-size: 1.5em;
-    
+    font-size: 1.5em;    
 }
     
 
