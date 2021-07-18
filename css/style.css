@@ -191,8 +191,19 @@ form i {
   background-color: white;
   border-radius: 20px;
   margin: 50px 15px 50px 15px;
+  animation: card_appear 1s;
 }
 
+@keyframes card_appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 a img {
   width: max-content;
   height: 200px;
