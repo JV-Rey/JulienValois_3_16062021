@@ -252,6 +252,40 @@ h3{
     font-size: 18px;
 }
 
+svg{
+    fill: transparent;
+}
+
+svg:hover{
+    fill: url(#gradient1);
+    fill-opacity: 1;
+    stroke: #000;
+    stroke-opacity: 0;
+    animation: fill 1s;
+}
+
+@keyframes fill{
+    0%{
+        transform-origin: bottom;
+        transform: scaleY(0);
+        fill: transparent;
+    }
+
+    50%{
+        fill: url(#gradient1);
+        transform: scaleY(0.5);
+        transition: ease-in-out;
+        fill-opacity: 0.5;
+    }
+
+    100%{
+        transform: scaleY(1);
+        fill: url(#gradient1);
+        transition: ease-in-out;
+        fill-opacity: 1;
+    }
+}
+
 footer{
     background-color: lighten($color: black, $amount: 20);
     & h2{
