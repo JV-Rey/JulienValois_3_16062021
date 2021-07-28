@@ -91,16 +91,18 @@ a {
   height: 100%;
   background-color: white;
   z-index: -1;
-  animation: load 3s;
+  animation: load 3s ease-out;
 }
 
 @keyframes load {
   0% {
     z-index: 1;
     position: fixed;
+    opacity: 1;
   }
   100% {
     z-index: 1;
+    opacity: 0;
   }
 }
 .spinning_loader {
@@ -113,6 +115,7 @@ a {
   border-radius: 16px;
   box-sizing: border-box;
   z-index: -2;
+  opacity: 0;
   width: 40px;
   height: 40px;
   animation: spinning_loader 3s linear;
@@ -121,6 +124,7 @@ a {
 @keyframes spinning_loader {
   0% {
     transform: rotate(0deg);
+    opacity: 1;
   }
   100% {
     transform: rotate(1080deg);
