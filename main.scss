@@ -266,36 +266,31 @@ h3{
     font-size: 18px;
 }
 
-svg{
-    fill: transparent;
+.heart svg {
+    overflow: visible;
+
+    path{
+        stroke-width: 2px;
+        fill: url(#gradient1);
+        fill-opacity: 0;
+    }
+
+    path:hover{
+        fill-opacity: 1;
+        stroke-opacity: 0;
+        animation: fill 3s;
+    }
 }
 
-svg:hover{
-    fill: url(#gradient1);
-    fill-opacity: 1;
-    stroke: #000;
-    stroke-opacity: 0;
-    animation: fill 1s;
-}
 
 @keyframes fill{
     0%{
-        transform-origin: bottom;
-        transform: scaleY(0);
-        fill: transparent;
-    }
-
-    50%{
         fill: url(#gradient1);
-        transform: scaleY(0.5);
-        transition: ease-in-out;
-        fill-opacity: 0.5;
+        fill-opacity: 0;
     }
 
     100%{
-        transform: scaleY(1);
         fill: url(#gradient1);
-        transition: ease-in-out;
         fill-opacity: 1;
     }
 }
@@ -488,6 +483,10 @@ footer{
         display: flex;
         justify-content: center;
         margin: 30px 0px 30px 0px;
+    }
+
+    .heart {
+        width: 100%;
     }
 
     .zindex_radius{
