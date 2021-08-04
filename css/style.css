@@ -258,6 +258,9 @@ h3 {
 .heart svg {
   overflow: visible;
 }
+.heart svg:hover {
+  animation: rotate 3s;
+}
 .heart svg path {
   stroke-width: 2px;
   fill: url(#gradient1);
@@ -269,6 +272,15 @@ h3 {
   animation: fill 3s;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+}
 @keyframes fill {
   0% {
     fill: url(#gradient1);
