@@ -3,17 +3,9 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $background-grey-light: lighten($color: rgb(230, 230, 230), $amount: 5);
 
-$margin: 20px;
-$margin_top: 20px;
-$margin_bottom: 20px;
-$margin_left: 20px;
-$margin_right: 20px;
+$pixel: 20px;
 
-$padding: 20px;
-$padding_top: 20px;
-$padding_bottom: 20px;
-$padding_left: 20px;
-$padding_right: 20px;
+$gradient: linear-gradient($color-secondary, $color-primary);
 
 $box-shadow: 5px 5px 8px rgb(230, 230, 230);
 $box-shadow-hover: 8px 8px 15px darken($color: rgb(230, 230, 230), $amount: 10);

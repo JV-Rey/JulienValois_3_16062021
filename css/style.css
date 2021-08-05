@@ -62,8 +62,21 @@ h1, h2, h3 {
   font-weight: 900;
 }
 
+h1, h2 {
+  font-size: 1.5em;
+}
+
 h1 {
   margin-top: 30px;
+}
+
+h2 {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .index_header {
@@ -76,6 +89,11 @@ h1 {
   text-align: center;
   background-color: #f3f3f3;
   padding-bottom: 50px;
+}
+.whereabout i {
+  position: relative;
+  right: 85px;
+  top: 15px;
 }
 .whereabout .whereabout__placeholder {
   text-align: center;
@@ -94,7 +112,7 @@ h1 {
 }
 
 .button {
-  padding: 15px;
+  padding: 20px;
   border-radius: 2rem;
   background-image: linear-gradient(#FF79DA, #9356DC);
   color: white;
@@ -105,68 +123,57 @@ h1 {
   box-shadow: 8px 8px 15px #cdcdcd;
 }
 
-.bold {
-  font-weight: bolder;
+.fonctionnement {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-h1, h2 {
-  font-size: 1.5em;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-form i {
-  position: relative;
-  right: 85px;
-  top: 15px;
-}
-
-.color_white {
-  color: white;
-}
-
-.border_radius_fonctionnement_backgound_hover {
+.fonctionnement__details {
   border-radius: 1rem;
-  padding: 15px 0px 15px 15px;
+  padding: 25px 0px 25px 15px;
   background-color: #f3f3f3;
+  margin: 20px;
+  box-shadow: 5px 5px 8px #e6e6e6;
 }
-.border_radius_fonctionnement_backgound_hover:hover {
+.fonctionnement__details:hover {
   background: #f2eafb;
+  box-shadow: 8px 8px 15px #cdcdcd;
 }
-.border_radius_fonctionnement_backgound_hover:hover i {
+.fonctionnement__details:hover i {
   color: #9356DC;
 }
 
-.number_border_radius {
+.fonctionnement__details--number {
   border-radius: 50%;
   padding: 5px 10px 5px 10px;
-}
-
-.number_background_color {
   background-color: #9356DC;
   color: white;
-}
-
-.number_position_relative {
   position: relative;
   right: 25px;
 }
 
-.card_restaurant {
+.fonctionnement__details--instruction {
+  margin-left: 20px;
+  font-weight: bolder;
+}
+
+.restaurant {
+  background-color: #f3f3f3;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.restaurant__card {
   background-color: white;
   border-radius: 20px;
   margin: 50px 15px 50px 15px;
+  padding-bottom: 1px;
+  box-shadow: 5px 5px 8px #e6e6e6;
 }
-
-.size_img {
-  max-width: 100%;
-  max-height: max-content;
+.restaurant__card:hover {
+  box-shadow: 8px 8px 15px #cdcdcd;
 }
-
-a img {
+.restaurant__card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -174,11 +181,11 @@ a img {
   border-top-right-radius: 20px;
 }
 
-.margin_top_-16px {
+.img_margin {
   margin-top: -16px;
 }
 
-.nouveau_position_color_background {
+.restaurant__card--nouveau {
   position: absolute;
   left: 72%;
   background-color: #99E2D0;
@@ -187,13 +194,10 @@ a img {
   font-weight: bolder;
 }
 
-.flex_space_between {
+.restaurant__name {
   display: flex;
   justify-content: space-between;
   margin: 15px;
-}
-.flex_space_between i {
-  font-size: 1.5em;
 }
 
 h3 {
@@ -239,19 +243,28 @@ h3 {
 }
 footer {
   background-color: #333333;
+  color: white;
+  padding: 25px;
 }
 footer h2 {
   font-style: oblique;
+  margin-left: 0px;
 }
 
 nav {
   display: flex;
   flex-direction: column;
 }
+nav li {
+  margin-top: 20px;
+}
 nav a {
   color: white;
 }
-nav a .fa-hands-helping {
+nav i {
+  margin-right: 20px;
+}
+nav .fa-hands-helping {
   font-size: 0.7em;
 }
 
@@ -261,6 +274,11 @@ nav a .fa-hands-helping {
   margin-top: 8px;
   margin-left: 10px;
   font-size: 1.5em;
+}
+
+.size_img {
+  max-width: 100%;
+  max-height: max-content;
 }
 
 .title_oblique {
@@ -389,12 +407,9 @@ nav a .fa-hands-helping {
 }
 
 @media screen and (min-width: 900px) {
-  .margin_left_15px {
-    margin-left: 0px;
-  }
-
   h1, h2 {
     text-align: center;
+    margin-left: 0px;
   }
 
   .img_trim {
@@ -416,10 +431,6 @@ nav a .fa-hands-helping {
     margin: 30px 0px 30px 0px;
   }
 
-  .heart {
-    width: 100%;
-  }
-
   .zindex_radius {
     margin-top: -40%;
   }
@@ -435,16 +446,16 @@ nav a .fa-hands-helping {
     padding-top: 60px;
   }
 
-  .flex_d {
+  .desktop_direction {
     display: flex;
     flex-direction: row;
   }
 
-  .flex_50 {
+  .fonctionnement__details, .restaurant__card {
     flex: 50;
   }
 
-  .nouveau_position_color_background {
+  .restaurant__card--nouveau {
     position: relative;
     top: 25px;
   }
@@ -455,12 +466,8 @@ nav a .fa-hands-helping {
 
   footer {
     text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
   }
-
-  nav {
+  footer nav {
     margin-left: 0px;
   }
 
