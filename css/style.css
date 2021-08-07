@@ -66,10 +66,6 @@ h1, h2 {
   font-size: 1.5em;
 }
 
-h1 {
-  margin-top: 30px;
-}
-
 h2 {
   margin-left: 20px;
 }
@@ -79,16 +75,22 @@ a {
   color: black;
 }
 
-.index_header {
+.header {
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.header img {
+  margin-top: 20px;
 }
 
 .whereabout {
   text-align: center;
   background-color: #f3f3f3;
   padding-bottom: 50px;
+}
+.whereabout form {
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .whereabout i {
   position: relative;
@@ -105,6 +107,10 @@ a {
   margin-top: -20px;
   padding: 0px;
   box-shadow: 0px -2px 0px #d9d9d9;
+}
+.whereabout h1, .whereabout p {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .whereabout p {
   margin-top: 20px;
@@ -179,10 +185,6 @@ a {
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-}
-
-.img_margin {
-  margin-top: -16px;
 }
 
 .restaurant__card--nouveau {
@@ -270,10 +272,14 @@ nav .fa-hands-helping {
 
 /*page menu*/
 .fa-arrow-left {
-  float: left;
-  margin-top: 8px;
-  margin-left: 10px;
+  position: absolute;
+  right: 90%;
+  top: 25px;
   font-size: 1.5em;
+}
+
+.header--menu {
+  margin-top: 0px;
 }
 
 .size_img {
@@ -281,40 +287,51 @@ nav .fa-hands-helping {
   max-height: max-content;
 }
 
-.title_oblique {
-  font-style: oblique;
-}
-
-.float_margin_size_heart {
-  float: right;
-  margin-right: 15px;
-  font-size: 1.5em;
-}
-
-.zindex_radius {
+.title_page_menu {
+  background-color: #f3f3f3;
+  padding-top: 30px;
   position: relative;
   z-index: 1;
   margin-top: -50px;
   border-radius: 50px 50px 0px 0px;
   padding-bottom: 100px;
 }
+.title_page_menu h1 {
+  font-style: oblique;
+}
 
-.zindex_margin_enchantee {
+.title_page_menu--enchantee {
   margin-top: -210px;
 }
 
-.title_menu {
+.title_plat {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 20px;
 }
-.title_menu:after {
+.title_plat:after {
   content: "";
   position: absolute;
   display: block;
   width: 50px;
   height: 5px;
   border-bottom: 3px solid #99E2D0;
+}
+
+.restaurant__card--menu {
+  padding: 15px;
+  margin: 20px auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
+}
+.restaurant__card--menu h3 {
+  margin-right: 10px;
+}
+.restaurant__card--menu span {
+  font-weight: bolder;
+  margin-right: 10px;
 }
 
 .animation_menu_appear {
@@ -354,10 +371,10 @@ nav .fa-hands-helping {
   display: none;
 }
 
-.card_restaurant:hover .check_box_appear {
+.restaurant__card:hover .check_box_appear {
   display: block;
   background-color: #99E2D0;
-  margin: -41px -30px -15px 0px;
+  margin: -41px -20px -15px 0px;
   padding: 24px 30px 0px 30px;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
@@ -374,7 +391,7 @@ nav .fa-hands-helping {
     transform: translate(0px);
   }
 }
-.card_restaurant .check_box_appear {
+.restaurant__card .check_box_appear {
   animation: checkbox reverse 1s;
 }
 
@@ -388,7 +405,7 @@ nav .fa-hands-helping {
     transform: translate(75px);
   }
 }
-.card_restaurant:hover .fa-check-circle {
+.restaurant__card:hover .fa-check-circle {
   animation: checkrotate 1s;
 }
 
@@ -406,7 +423,12 @@ nav .fa-hands-helping {
   font-size: 1.5em;
 }
 
-@media screen and (min-width: 900px) {
+.button_center {
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 1075px) {
   h1, h2 {
     text-align: center;
     margin-left: 0px;
@@ -417,38 +439,36 @@ nav .fa-hands-helping {
     overflow: hidden;
   }
 
-  .card_restaurant {
-    margin: 50px auto;
-  }
-
-  .display_block {
+  .restaurant__name--desktop {
     display: block;
   }
 
-  .position_center {
+  .heart--position {
     display: flex;
     justify-content: center;
-    margin: 30px 0px 30px 0px;
+    margin: 30px 0px;
   }
 
-  .zindex_radius {
+  .title_page_menu {
     margin-top: -40%;
   }
 
-  .zindex_margin_enchantee {
+  .title_page_menu--enchantee {
     margin-top: -1000px;
   }
 
-  .zindex_footer {
+  .title_plat::after {
     position: relative;
-    z-index: 1;
-    padding-bottom: 50px;
-    padding-top: 60px;
+    left: 45%;
   }
 
   .desktop_direction {
     display: flex;
     flex-direction: row;
+  }
+
+  .desktop_direction--flex {
+    flex: 50;
   }
 
   .fonctionnement__details, .restaurant__card {
@@ -466,14 +486,12 @@ nav .fa-hands-helping {
 
   footer {
     text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 70px 0px;
   }
   footer nav {
     margin-left: 0px;
-  }
-
-  .title_menu::after {
-    position: relative;
-    left: 45%;
   }
 }
 
