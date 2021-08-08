@@ -188,12 +188,17 @@ a {
 }
 
 .restaurant__card--nouveau {
-  position: absolute;
+  position: relative;
   left: 72%;
+  top: 25px;
   background-color: #99E2D0;
   padding: 5px;
   color: #278870;
   font-weight: bolder;
+}
+
+.img_margin {
+  margin-top: -16px;
 }
 
 .restaurant__name {
@@ -210,9 +215,6 @@ h3 {
 .heart svg {
   overflow: visible;
 }
-.heart svg:hover {
-  animation: rotate 3s;
-}
 .heart svg path {
   stroke-width: 2px;
   fill: url(#gradient1);
@@ -221,26 +223,22 @@ h3 {
 .heart svg path:hover {
   fill-opacity: 1;
   stroke-opacity: 0;
-  animation: fill 3s;
+  cursor: pointer;
+  animation: fill 1.5s ease-in-out;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-    transform-origin: bottom;
-  }
-  100% {
-    transform: rotate(720deg);
-  }
-}
 @keyframes fill {
   0% {
+    transform-origin: center;
     fill: url(#gradient1);
     fill-opacity: 0;
+    transform: rotate(0deg);
   }
   100% {
+    transform-origin: center;
     fill: url(#gradient1);
     fill-opacity: 1;
+    transform: rotate(720deg);
   }
 }
 footer {
@@ -341,7 +339,7 @@ nav .fa-hands-helping {
 @keyframes menu_appear {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
@@ -368,43 +366,20 @@ nav .fa-hands-helping {
 }
 
 .check_box_appear {
-  display: none;
-}
-
-.restaurant__card:hover .check_box_appear {
-  display: block;
   background-color: #99E2D0;
   margin: -41px -20px -15px 0px;
   padding: 24px 30px 0px 30px;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
-  animation: checkbox 1s;
+  transform: translatex(80px);
+  transition: transform 0.65s ease-in-out;
 }
 
-@keyframes checkbox {
-  0% {
-    opacity: 0;
-    transform: translate(75px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0px);
-  }
-}
-.restaurant__card .check_box_appear {
-  animation: checkbox reverse 1s;
+.restaurant__card:hover .check_box_appear {
+  transform: translatex(0px);
+  transition: transform 0.65s ease-in-out;
 }
 
-@keyframes check_after {
-  0% {
-    opacity: 1;
-    transform: translate(0px);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(75px);
-  }
-}
 .restaurant__card:hover .fa-check-circle {
   animation: checkrotate 1s;
 }
@@ -473,11 +448,6 @@ nav .fa-hands-helping {
 
   .fonctionnement__details, .restaurant__card {
     flex: 50;
-  }
-
-  .restaurant__card--nouveau {
-    position: relative;
-    top: 25px;
   }
 
   .overflow {
