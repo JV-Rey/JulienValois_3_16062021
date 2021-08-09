@@ -178,30 +178,16 @@ h3{
     path{
         stroke-width: 2px;
         fill: url(#gradient1);
-        fill-opacity: 0;
+        fill-opacity: 0;        
         &:hover{
             fill-opacity: 1;
             stroke-opacity: 0;
             cursor: pointer;
-            animation: fill 1.5s ease-in-out ;
+            transform-origin: center;
+            transform: rotate(360deg);
+            transition: transform 1s ease-in-out, fill-opacity 1s ease-in-out;
         }
     }    
-}
-
-@keyframes fill{
-    0%{
-        transform-origin: center;
-        fill: url(#gradient1);
-        fill-opacity: 0;     
-        transform: rotate(0deg);   
-    }
-
-    100%{
-        transform-origin: center;
-        fill: url(#gradient1);
-        fill-opacity: 1;     
-        transform: rotate(720deg);   
-    }
 }
 
 footer{
@@ -347,23 +333,16 @@ nav{
 }
 
 .restaurant__card:hover .fa-check-circle{
-    animation: checkrotate 1s;
-}
-
-@keyframes checkrotate{
-    0%{
-        transform: rotate(0);
-    }
-
-    100%{
-        transform: rotate(1440deg);
-    }
+    transform: rotate(720deg);
+    transition: transform 1s ease-in-out;
 }
 
 .fa-check-circle{
     background-color:$color-tertiary;
     color: white;
-    font-size: 1.5em;    
+    font-size: 1.5em;
+    transform: rotate(0deg);
+    transition: transform 1s ease-in-out;
 }   
 
 .button_center{
