@@ -127,33 +127,31 @@ a{
     background-color: $background-grey-light;
     padding-top: $pixel;
     padding-bottom: $pixel;
-}
-
-.restaurant__card{
-    background-color: white;
-    border-radius: $pixel;
-    margin: 50px 15px 50px 15px;
-    padding-bottom: 1px;
-    box-shadow: $box-shadow;
-    &:hover{
-        box-shadow: $box-shadow-hover;
+    &__card{
+        background-color: white;
+        border-radius: $pixel;
+        margin: 50px 15px 50px 15px;
+        padding-bottom: 1px;
+        box-shadow: $box-shadow;
+        &:hover{
+            box-shadow: $box-shadow-hover;
+        }
+        &--nouveau{
+            position: relative;
+            left: 70%;
+            top: 25px;
+            background-color: $color-tertiary;
+            padding: 5px;
+            color: darken($color: $color-tertiary, $amount: 40);
+            font-weight: bolder;
+        }
     }
-    &--nouveau{
-        position: relative;
-        left: 72%;
-        top: 25px;
-        background-color: $color-tertiary;
-        padding: 5px;
-        color: darken($color: $color-tertiary, $amount: 40);
-        font-weight: bolder;
-    }
-
     img{
         width: 100%;
         height: 200px;
         object-fit: cover;
         border-top-left-radius: $pixel;
-        border-top-right-radius: $pixel;
+        border-top-right-radius: $pixel;                
     }
 }
 
@@ -249,10 +247,9 @@ nav{
     h1{
         font-style: oblique;
     }
-}
-
-.title_page_menu--enchantee{
-    margin-top: -210px;
+    &--enchantee{
+        margin-top: -210px;
+    }
 }
 
 .title_plat{
@@ -284,7 +281,14 @@ nav{
 }
 
 .animation_menu_appear{
-    animation: menu_appear 1s;
+    animation: menu_appear 1s both;
+    &--delay1{
+        animation-delay: 0.2s;
+    }
+    
+    &--delay2{
+        animation-delay: 0.4s;
+    }
 }
 
 @keyframes menu_appear{
@@ -297,14 +301,6 @@ nav{
         opacity: 1;
         transform: translateY(0px);
     }
-}
-
-.delay1{
-    animation-delay: 0.2s;
-}
-
-.delay2{
-    animation-delay: 0.4s;
 }
 
 .flex_menu{
