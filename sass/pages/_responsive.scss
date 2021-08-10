@@ -1,0 +1,46 @@
+@media screen and (min-width: 1075px){
+
+    h1, h2{
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .img_trim{
+        max-height: 1500px;
+        overflow: hidden;
+    }
+
+    .restaurant__name--desktop{
+        display: block;
+    }
+
+    .title_page_menu{
+        margin-top: -40%;
+    }
+
+    .title_page_menu--enchantee{
+        margin-top: -1000px;
+    }
+
+    .title_plat::after{
+        position: relative;
+        left: 45%;
+    }
+
+    .desktop_direction{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .desktop_direction--flex{
+        flex: 50;
+    }
+
+    .fonctionnement__details, .restaurant__card{
+        flex: 50;
+    }
+
+    .overflow{
+        width: 80%;
+    }      
+}

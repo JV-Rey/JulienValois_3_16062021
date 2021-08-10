@@ -1,0 +1,25 @@
+.heart svg {
+    overflow: visible;
+    
+    path{
+        stroke-width: 2px;
+        fill: url(#gradient1);
+        fill-opacity: 0;        
+        &:hover{
+            fill-opacity: 1;
+            stroke-opacity: 0;
+            cursor: pointer;
+            transform-origin: center;
+            transform: rotate(360deg);
+            transition: transform 1s ease-in-out, fill-opacity 1s ease-in-out;
+        }
+    }    
+}
+
+@media screen and (min-width: 1075px){
+    .heart--position{
+        display: flex;
+        justify-content: center;
+        margin: $pixel +10 0px;
+    }
+}

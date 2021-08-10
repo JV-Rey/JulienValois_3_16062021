@@ -1,0 +1,22 @@
+.header{
+    text-align: center;
+    margin-top: $pixel;
+    img{
+        margin-top: $pixel;
+    }
+    &--menu{
+        margin-top: 0px;
+    }
+}
+
+.fa-arrow-left{
+    position: absolute;
+    right: 90%;
+    top: $pixel +5;
+    font-size: 1.5em;
+}
+
+.size_img{
+    max-width: 100%;
+    max-height: max-content;
+}

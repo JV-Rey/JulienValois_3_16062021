@@ -1,0 +1,111 @@
+@import "../utils/mixins";
+
+.title_page_menu{
+    background-color: $background-grey-light;
+    padding-top: $pixel +10;
+    position: relative;
+    z-index: 1;
+    margin-top: -50px;
+    border-radius: 50px 50px 0px 0px;
+    padding-bottom: 100px;
+    h1{
+        font-style: oblique;
+    }
+    &--enchantee{
+        margin-top: -70%;
+    }
+}
+
+.title_plat{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 20px;
+    &:after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 5px;
+        border-bottom: 3px solid $color-tertiary;
+    }
+}
+
+.restaurant__card--menu{
+    padding: 15px;
+    margin: $pixel auto;
+    @include overflow;
+    max-width: 300px;
+    h3{
+        margin-right: 10px;
+    }
+    span{
+        font-weight: bolder;
+        margin-right: 10px;
+    }
+}
+
+.animation_menu_appear{
+    animation: menu_appear 1s both;
+    &--delay1{
+        animation-delay: 0.2s;
+    }
+    
+    &--delay2{
+        animation-delay: 0.4s;
+    }
+}
+
+@keyframes menu_appear{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.flex_menu{
+    display: flex;
+}
+
+.overflow{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.check_box_appear{
+    background-color:$color-tertiary;
+    margin: -15px -29px -15px 0px;
+    padding: 24px 30px 0px 30px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    transform: translatex(10px);
+    transition: transform 0.65s ease-in-out;
+}
+
+.restaurant__card:hover .check_box_appear{    
+    transform: translatex(-80px);
+    transition: transform 0.65s ease-in-out;
+}
+
+.restaurant__card:hover .fa-check-circle{
+    transform: rotate(720deg);
+    transition: transform 1s ease-in-out;
+}
+
+.fa-check-circle{
+    background-color:$color-tertiary;
+    color: white;
+    font-size: 1.5em;
+    transform: rotate(0deg);
+    transition: transform 1s ease-in-out;
+}   
+
+.button_center{
+    text-align: center;
+    margin-top: $pixel +30;
+}

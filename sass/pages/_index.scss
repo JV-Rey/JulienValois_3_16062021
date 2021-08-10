@@ -1,0 +1,124 @@
+.whereabout{
+    text-align: center;
+    background-color: $background-grey-light;
+    padding-bottom: $pixel +30;
+
+    form{
+        margin-top: $pixel;
+        margin-bottom: $pixel +10;
+    }
+
+    i{
+        position: relative;
+        right: 85px;
+        top: 15px;
+    }
+
+    .whereabout__placeholder{
+        text-align: center;
+        font-size: 18px;
+        height: 3rem;
+        background-color: rgb(230, 230, 230);
+        width: 100%;
+        border: none;
+        margin-top: -$pixel;
+        padding: 0px;
+        box-shadow: 0px -2px 0px darken($color: rgb(230, 230, 230), $amount: 5);
+    }
+    
+    h1, p{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    p{
+        margin-top: $pixel;
+        margin-bottom: $pixel +20;
+    }
+}
+
+.button{
+    padding: $pixel;
+    border-radius: 2rem;
+    background-image: $gradient;
+    color: white;
+    box-shadow: $box-shadow;
+    &:hover{
+        opacity: 0.9;
+        box-shadow: $box-shadow-hover;
+    }
+}
+
+.fonctionnement{
+    margin-top: $pixel +10;
+    margin-bottom: $pixel +10;
+}
+
+.fonctionnement__details{
+    border-radius: 1rem;
+    padding: 25px 0px 25px 15px;
+    background-color: $background-grey-light;
+    margin: $pixel;
+    box-shadow: $box-shadow;
+    &:hover{
+        background: lighten($color: $color-primary, $amount: 35);
+        box-shadow: $box-shadow-hover;
+        & i{
+            color: $color-primary;
+        }
+    }
+    &--number{
+        border-radius: 50%;
+        padding: 5px 10px 5px 10px;
+        background-color: $color-primary;
+        color: white;
+        position: relative;
+        right: 25px;
+    }
+    &--instruction{
+        margin-left: $pixel;
+        font-weight: bolder;
+    }
+}
+
+.restaurant{
+    background-color: $background-grey-light;
+    padding-top: $pixel;
+    padding-bottom: $pixel;
+    &__card{
+        background-color: white;
+        border-radius: $pixel;
+        margin: 50px 15px 50px 15px;
+        padding-bottom: 1px;
+        box-shadow: $box-shadow;
+        &:hover{
+            box-shadow: $box-shadow-hover;
+        }
+        &--nouveau{
+            position: relative;
+            left: 70%;
+            top: 25px;
+            background-color: $color-tertiary;
+            padding: 5px;
+            color: darken($color: $color-tertiary, $amount: 40);
+            font-weight: bolder;
+        }
+    }
+    img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: $pixel;
+        border-top-right-radius: $pixel;                
+    }
+}
+
+.img_margin{
+    margin-top: -16px;
+}
+
+.restaurant__name{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}

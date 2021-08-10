@@ -1,0 +1,41 @@
+footer{
+    background-color: lighten($color: black, $amount: 20);
+    color: white;
+    padding: $pixel +5;
+    & h2{
+        font-style: oblique;
+        margin-left: 0px;
+    }
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    
+    li{
+        margin-top: $pixel;
+    }
+    a{
+        color: white;        
+    }
+
+    i{
+        margin-right: $pixel;
+    }
+
+    .fa-hands-helping{
+        font-size: 0.7em;
+    }
+ }
+
+ @media screen and (min-width: 1075px){
+    footer{
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        padding: 70px 0px;
+        nav{
+            margin-left: 0px;        
+        }
+    }  
+ }

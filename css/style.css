@@ -46,43 +46,6 @@
     transform: rotate(1080deg);
   }
 }
-@font-face {
-  font-family: "Shrikhand";
-  src: url(../fonts/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
-  font-family: "Roboto";
-  src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
-}
-body {
-  font-family: "Roboto";
-  width: 100%;
-}
-
-h1, h2, h3 {
-  font-family: "Shrikhand";
-  font-weight: 900;
-}
-
-h1, h2 {
-  font-size: 1.5em;
-}
-
-h2 {
-  margin-left: 20px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.header {
-  text-align: center;
-  margin-top: 20px;
-}
-.header img {
-  margin-top: 20px;
-}
-
 .whereabout {
   text-align: center;
   background-color: #f3f3f3;
@@ -203,72 +166,6 @@ a {
   margin: 15px;
 }
 
-h3 {
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-
-.heart svg {
-  overflow: visible;
-}
-.heart svg path {
-  stroke-width: 2px;
-  fill: url(#gradient1);
-  fill-opacity: 0;
-}
-.heart svg path:hover {
-  fill-opacity: 1;
-  stroke-opacity: 0;
-  cursor: pointer;
-  transform-origin: center;
-  transform: rotate(360deg);
-  transition: transform 1s ease-in-out, fill-opacity 1s ease-in-out;
-}
-
-footer {
-  background-color: #333333;
-  color: white;
-  padding: 25px;
-}
-footer h2 {
-  font-style: oblique;
-  margin-left: 0px;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-}
-nav li {
-  margin-top: 20px;
-}
-nav a {
-  color: white;
-}
-nav i {
-  margin-right: 20px;
-}
-nav .fa-hands-helping {
-  font-size: 0.7em;
-}
-
-/*page menu*/
-.fa-arrow-left {
-  position: absolute;
-  right: 90%;
-  top: 25px;
-  font-size: 1.5em;
-}
-
-.header--menu {
-  margin-top: 0px;
-}
-
-.size_img {
-  max-width: 100%;
-  max-height: max-content;
-}
-
 .title_page_menu {
   background-color: #f3f3f3;
   padding-top: 30px;
@@ -282,7 +179,7 @@ nav .fa-hands-helping {
   font-style: oblique;
 }
 .title_page_menu--enchantee {
-  margin-top: -210px;
+  margin-top: -70%;
 }
 
 .title_plat {
@@ -378,6 +275,125 @@ nav .fa-hands-helping {
   margin-top: 50px;
 }
 
+.header {
+  text-align: center;
+  margin-top: 20px;
+}
+.header img {
+  margin-top: 20px;
+}
+.header--menu {
+  margin-top: 0px;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  right: 90%;
+  top: 25px;
+  font-size: 1.5em;
+}
+
+.size_img {
+  max-width: 100%;
+  max-height: max-content;
+}
+
+footer {
+  background-color: #333333;
+  color: white;
+  padding: 25px;
+}
+footer h2 {
+  font-style: oblique;
+  margin-left: 0px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+nav li {
+  margin-top: 20px;
+}
+nav a {
+  color: white;
+}
+nav i {
+  margin-right: 20px;
+}
+nav .fa-hands-helping {
+  font-size: 0.7em;
+}
+
+@media screen and (min-width: 1075px) {
+  footer {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 70px 0px;
+  }
+  footer nav {
+    margin-left: 0px;
+  }
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url(../fonts/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
+  font-family: "Roboto";
+  src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+body {
+  font-family: "Roboto";
+  width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: "Shrikhand";
+  font-weight: 900;
+}
+
+h1, h2 {
+  font-size: 1.5em;
+}
+
+h2 {
+  margin-left: 20px;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.heart svg {
+  overflow: visible;
+}
+.heart svg path {
+  stroke-width: 2px;
+  fill: url(#gradient1);
+  fill-opacity: 0;
+}
+.heart svg path:hover {
+  fill-opacity: 1;
+  stroke-opacity: 0;
+  cursor: pointer;
+  transform-origin: center;
+  transform: rotate(360deg);
+  transition: transform 1s ease-in-out, fill-opacity 1s ease-in-out;
+}
+
+@media screen and (min-width: 1075px) {
+  .heart--position {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+  }
+}
 @media screen and (min-width: 1075px) {
   h1, h2 {
     text-align: center;
@@ -391,12 +407,6 @@ nav .fa-hands-helping {
 
   .restaurant__name--desktop {
     display: block;
-  }
-
-  .heart--position {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0px;
   }
 
   .title_page_menu {
@@ -427,16 +437,6 @@ nav .fa-hands-helping {
 
   .overflow {
     width: 80%;
-  }
-
-  footer {
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    padding: 70px 0px;
-  }
-  footer nav {
-    margin-left: 0px;
   }
 }
 
