@@ -206,6 +206,9 @@
   width: 90%;
   max-width: 330px;
 }
+.restaurant__card--menu:hover {
+  cursor: pointer;
+}
 .restaurant__card--menu h3 {
   margin-right: 10px;
 }
@@ -236,7 +239,7 @@
 .menu--grid {
   display: grid;
   max-width: 100%;
-  width: 330px;
+  width: 350px;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
   grid-gap: 5px;
@@ -303,6 +306,10 @@
 .button_center {
   text-align: center;
   margin-top: 50px;
+}
+
+.button--menu {
+  padding: 20px 50px;
 }
 
 .header {
